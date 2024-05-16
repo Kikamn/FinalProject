@@ -1,7 +1,6 @@
 package StepDef;
 
-import org.junit.After;
-import org.junit.Before;
+import io.cucumber.java.*;
 
 import static Helper.Utility.*;
 

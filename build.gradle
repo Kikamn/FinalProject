@@ -26,30 +26,12 @@ dependencies {
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.17.0'
 }
 
-/*test {
+test {
     useJUnitPlatform()
-}*/
-
-configurations {
-    cucumberRuntime{
-        extendsFrom testImplementation
-    }
+    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
 }
-
-def tags = (findProperty('tags') == null) ? 'not @exclude' : findProperty('tags') + ' and not @exclude'
-
-task cucumber() {
-    description("Running Cucumber Test")
-    dependsOn assemble, compileTestJava
-    doLast {
-        javaexec {
-            main = "io.cucumber.core.cli.Main"
-            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = [
-                    '--plugin', 'pretty',
-                    '--glue', 'StepDef',
-                    'src/test/java/Features'
-            ]
-        }
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
     }
 }
