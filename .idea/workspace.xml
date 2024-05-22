@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ba67c5e-3606-4bde-a82c-ce289eba44c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/kika/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Features/web.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Helper/Utility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/WebPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Runner/testRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDef/Hooks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDef/WebStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Features/web.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Features/web.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Helper/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/WebPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/WebPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDef/WebStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDef/WebStep.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,36 +32,126 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2gXOG23x5kFmgJwm1DgMxRb38h5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Scenario: Test Home  PRODUCT STORE.executor": "Run",
-    "Gradle.Build FinalProject.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/intel/Desktop/JAVA/WebUIandAPI",
-    "onboarding.tips.debug.path": "C:/Users/intel/Desktop/JAVA/FinalProject/src/main/java/org/kika/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Scenario: Access Contact in product Store.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Close Contact in product Store.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Test Categories in Product Store.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Test Home  PRODUCT STORE.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: User Login with Username and password valid.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: User can access Cart.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: User can close form sign up.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: User can see detail from product.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: User log in with username and password empty.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: User log in with username and password invalid.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: User sign in with username and password not register.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build FinalProject.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/intel/Desktop/JAVA/Web_UI_Automation&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/intel/Desktop/JAVA/FinalProject/src/main/java/org/kika/Main.java&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="Scenario: Test Home  PRODUCT STORE" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="Cucumber Java.Scenario: Test Categories in Product Store">
+    <configuration name="Scenario: Test Categories in Product Store" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/Features/web.feature" />
       <option name="GLUE" value="StepDef" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="FinalProject.test" />
-      <option name="NAME_FILTER" value="^Test Home  PRODUCT STORE$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Test Home  PRODUCT STORE$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Test Home  PRODUCT STORE" />
+      <option name="NAME_FILTER" value="^Test Categories in Product Store$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Test Categories in Product Store$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Test Categories in Product Store" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: User can access Cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/Features/web.feature" />
+      <option name="GLUE" value="StepDef" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="FinalProject.test" />
+      <option name="NAME_FILTER" value="^User can access Cart$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^User can access Cart$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: User can access Cart" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: User can close form sign up" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/Features/web.feature" />
+      <option name="GLUE" value="StepDef" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="FinalProject.test" />
+      <option name="NAME_FILTER" value="^User can close form sign up$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^User can close form sign up$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: User can close form sign up" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: User can see detail from product" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/Features/web.feature" />
+      <option name="GLUE" value="StepDef" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="FinalProject.test" />
+      <option name="NAME_FILTER" value="^User can see detail from product$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^User can see detail from product$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: User can see detail from product" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: User sign in with username and password not register" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/Features/web.feature" />
+      <option name="GLUE" value="StepDef" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="FinalProject.test" />
+      <option name="NAME_FILTER" value="^User sign in with username and password not register$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^User sign in with username and password not register$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: User sign in with username and password not register" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -87,7 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Test Home  PRODUCT STORE" />
+        <item itemvalue="Cucumber Java.Scenario: Test Categories in Product Store" />
+        <item itemvalue="Cucumber Java.Scenario: User can access Cart" />
+        <item itemvalue="Cucumber Java.Scenario: User can see detail from product" />
+        <item itemvalue="Cucumber Java.Scenario: User can close form sign up" />
+        <item itemvalue="Cucumber Java.Scenario: User sign in with username and password not register" />
       </list>
     </recent_temporary>
   </component>
@@ -101,5 +183,16 @@
       <updated>1715840360385</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
