@@ -5,6 +5,6 @@ Feature: Testing API DUMMYAPI IO
     Given Prepare URL valid for "GET_LIST"
     And Hit API get list data
     Then Validation status code is equals 200
-    #Then Validation response body get list user
+    Then Validation response body get list user
     Then Validation response json whit JSONSchema "get_list_user.json"
 

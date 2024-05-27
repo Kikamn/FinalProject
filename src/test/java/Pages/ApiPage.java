@@ -39,11 +39,11 @@ public class ApiPage {
     }
 
     public void validationResponseBodyGetListUser(){
-        List<Objects> id = res.jsonPath().getList("data[0].id");
-        List<Objects> title = res.jsonPath().getList("data[0].title");
-        List<Objects> firstName = res.jsonPath().getList("data[0].firstName");
-        List<Objects> lastName = res.jsonPath().getList("data[0].lastName");
-        List<Objects> picture = res.jsonPath().getList("data[0].picture");
+        String id = res.jsonPath().getString("data[0].id");
+        String title = res.jsonPath().getString("data[0].title");
+        String firstName = res.jsonPath().getString("data[0].firstName");
+        String lastName = res.jsonPath().getString("data[0].lastName");
+        String picture = res.jsonPath().getString("data[0].picture");
 
         Assertions.assertThat(id).isNotNull();
         Assertions.assertThat(title).isIn("mr", "ms", "mrs", "miss", "dr");
