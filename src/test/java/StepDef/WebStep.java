@@ -40,11 +40,11 @@ public class WebStep {
     }
 
     @And("Click Monitors")
-    public void clickMonitors() {
+    public void clickMonitors() { webPage.clickMonitors();
     }
 
     @Then("Will show all type monitor")
-    public void willShowAllTypeMonitor() {
+    public void willShowAllTypeMonitor() { webPage.willShowAllTypeMonitor();
     }
 
     @And("Click nav contact")
@@ -87,9 +87,14 @@ public class WebStep {
         webPage.clickButtonClose();
     }
 
-    @And("Click button X")
-    public void clickButtonX() {
-        webPage.clickButtonX();
+    @And("Click nav About US")
+    public void clickNavAboutUS() {
+        webPage.clickNavAboutUS();
+    }
+
+    @Then("Will show video player")
+    public void willShowVideoPlayer() {
+        webPage.willShowVideoPlayer();
     }
 
     @And("Click nav Log in")
@@ -122,9 +127,17 @@ public class WebStep {
         webPage.logInWillBeSuccessful();
     }
 
-    @Then("Will show alert")
-    public void willShowAlert() {
-        webPage.willShowAlert();
+    @Then("Will show {string} at top right of the page")
+    public void willShowAtTopRightOfThePage(String user_name) {
+        webPage.willShowAtTopRightOfThePage(user_name);
+    }
+
+    @And("Click button Log out")
+    public void clickButtonLogOut() { webPage.clickButtonLogOut(); }
+
+    @Then("Will show alert {string}")
+    public void willShowAlert(String alertMasage) throws InterruptedException {
+       webPage.willShowAlert(alertMasage);
     }
 
     @And("Click nav Sign up")
@@ -145,11 +158,6 @@ public class WebStep {
     @And("Click button sign up")
     public void clickButtonSignUp() {
         webPage.clickButtonSignUp();
-    }
-
-    @Then("Will show alert sign up")
-    public void willShowAlertSignUp() {
-        webPage.willShowAlert();
     }
 
     @And("Click button close sign up")
@@ -188,15 +196,76 @@ public class WebStep {
         webPage.clickButtonAddToCart();
     }
 
-    @And("Click oke in alert to cart")
-    public void clickOkeInAlerttoCart() throws InterruptedException{ webPage.clickOkeInAlerttoCart(); }
-
     @And("Click Nav Cart")
     public void clickNavCart() { webPage.clickNavCart(); }
 
     @Then("Will show purchased products")
     public void willShowPurchasedProducts() {
         webPage.willShowPurchasedProducts();
+    }
+
+    @And("Click button Delete")
+    public void clickButtonDelete() { webPage.clickButtonDelete(); }
+
+    @Then("Cart will empty")
+    public void cartWillEmpty() { webPage.cartWillEmpty(); }
+
+    @And("Click button Place Order")
+    public void clickButtonPlaceOrder() { webPage.clickButtonPlaceOrder(); }
+
+    @And("Click button Close Place Order")
+    public void clickButtonClosePlaceOrder() {
+        webPage.clickButtonClosePlaceOrder();
+    }
+
+    @Then("Will back to Cart")
+    public void willBackToCart() {
+        webPage.willBackToCart();
+    }
+
+    @And("Click button Purchase")
+    public void clickButtonPurchase() {
+        webPage.clickButtonPurchase();
+    }
+
+    @And("Fill Name {string}")
+    public void fillName(String name_purchase) {
+        webPage.fillName(name_purchase);
+    }
+
+    @And("Fill County {string}")
+    public void fillCounty(String country) {
+        webPage.fillCounty(country);
+    }
+
+    @And("Fill City {string}")
+    public void fillCity(String city) {
+        webPage.fillCity(city);
+    }
+
+    @And("Fill Credit card {string}")
+    public void fillCreditCard(String card_purchase) {
+        webPage.fillCreditCard(card_purchase);
+    }
+
+    @And("Fill Month {string}")
+    public void fillMonth(String month) {
+        webPage.fillMonth(month);
+    }
+
+    @And("Fill year {string}")
+    public void fillYear(String year) {
+        webPage.fillYear(year);
+    }
+
+    @Then("Will show Thank you for your purchase!")
+    public void willShowThankYouForYourPurchase() {
+        webPage.willShowThankYouForYourPurchase();
+    }
+
+    @Then("Can click oke")
+    public void canClickOke() {
+        webPage.canClickOke();
     }
 
 }

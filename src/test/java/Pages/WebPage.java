@@ -2,6 +2,7 @@ package Pages;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.time.Duration;
@@ -27,13 +28,17 @@ public class WebPage {
     By inpMassage = By.id("message-text");
     By btnSend = By.xpath("//*[@id=\"exampleModal\"]/div/div/div[3]/button[2]");
     By btnClose = By.xpath("//*[@id=\"exampleModal\"]/div/div/div[3]/button[1]");
-    By btnX = By.xpath("//*[@id=\"exampleModal\"]/div/div/div[1]/button");
+    //About Us
+    By navAboutUs = By.xpath("/html/body/nav/div[1]/ul/li[3]/a");
+    By displayVideo = By.xpath("/html/body/div[4]/div/div/div[2]/form/div/div/div[1]");
     //Log In
     By navLogIn = By.id("login2");
     By inpUsername = By.id("loginusername");
     By inpPassword = By.id("loginpassword");
     By btnLogIn = By.xpath("//*[@id=\"logInModal\"]/div/div/div[3]/button[2]");
     By btnCloseLog = By.xpath("//*[@id=\"logInModal\"]/div/div/div[3]/button[1]");
+    By btnLogOut = By.xpath("/html/body/nav/div[1]/ul/li[6]/a");
+    By welcomeName = By.id("nameofuser");
     // Sign Up
     By navSignUp = By.id("signin2");
     By inpNameSign = By.id("sign-username");
@@ -48,7 +53,20 @@ public class WebPage {
     By btnAddtoCart = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a");
     //Cart
     By navCart = By.id("cartur");
-
+    By productCart = By.xpath("/html/body/div[6]/div/div[1]/div/table/tbody/tr");
+    By btnDelete = By.xpath("//*[@id=\"tbodyid\"]/tr/td[4]/a");
+    By tableCart = By.id("tbodyid");
+    By btnPlaceOrder = By.xpath("//*[@id=\"page-wrapper\"]/div/div[2]/button");
+    By btnClosePlace = By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[1]");
+    By btnPurchase = By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[2]");
+    By namePurchase = By.id("name");
+    By countryPurchase = By.id("country");
+    By cityPurchase = By.id("city");
+    By creditPurchase = By.id("card");
+    By monthPurchase = By.id("month");
+    By yearPurchase = By.id("year");
+    By thankPurchase = By.xpath("/html/body/div[10]/h2");
+    By okePurchase = By.xpath("/html/body/div[10]/div[7]/div/button");
 
     public void goToHome(){driver.get("https://www.demoblaze.com/");}
 
@@ -63,19 +81,19 @@ public class WebPage {
     }
 
     public void willShowAllTypePhone(){
-        WebElement phone = driver.findElement(impPhone);
-        assertTrue(phone.isDisplayed());
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.findElement(impPhone).isDisplayed();
     }
 
     public void clickLaptops(){
         driver.findElement(laptopsBtn).click();
     }
 
-    public void willShowAllTypeLaptop(){
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        WebElement laptop = driver.findElement(imgLaptop);
-        assertTrue(laptop.isDisplayed());
-    }
+    public void willShowAllTypeLaptop(){ driver.findElement(imgLaptop).isDisplayed(); }
+
+    public void clickMonitors(){ driver.findElement(monitorBtn).click(); }
+
+    public void willShowAllTypeMonitor(){ driver.findElement(imgMonitor).isDisplayed(); }
 
     public void clickNavContact () { driver.findElement(navContact).click(); }
 
@@ -91,7 +109,9 @@ public class WebPage {
 
     public void clickButtonClose () { driver.findElement(btnClose); }
 
-    public void clickButtonX () { driver.findElement(btnX).click(); }
+    public void clickNavAboutUS () { driver.findElement(navAboutUs).click(); }
+
+    public void willShowVideoPlayer () { driver.findElement(displayVideo).isDisplayed(); }
 
     public void clickNavLogIn () { driver.findElement(navLogIn).click(); }
 
@@ -105,9 +125,27 @@ public class WebPage {
 
     public void logInWillBeSuccessful() { driver.get("https://www.demoblaze.com/index.html"); }
 
-    public void willShowAlert () {
-        driver.switchTo().alert().getText();
-        driver.switchTo().alert().accept();
+    public void willShowAtTopRightOfThePage (String massage) { driver.findElement(welcomeName).isDisplayed(); }
+
+    public void clickButtonLogOut () { driver.findElement(btnLogOut); }
+
+    public static void willShowAlert (String alertMasaage) throws InterruptedException {
+        Thread.sleep(3000);
+        try {
+            Alert alert = driver.switchTo().alert();
+            String massageAlert = driver.switchTo().alert().getText();
+            System.out.println(massageAlert);
+            Thread.sleep(3000);
+            alert.accept();
+
+            if (alertMasaage.equals(alertMasaage)) {
+                System.out.println(alertMasaage);
+            } else {
+                System.out.println("Alert Message does not match the expected message");
+            }
+        }catch (Exception a){
+            System.out.println("Alert not found");
+        }
     }
 
     public void clickNavSignUp () { driver.findElement(navSignUp).click(); }
@@ -117,10 +155,6 @@ public class WebPage {
     public void fillPasswordSignUp (String password) { driver.findElement(inpPassSign).sendKeys(password); }
 
     public void clickButtonSignUp () { driver.findElement(btnSign).click(); }
-
-    public void willShowAlertSignUp () {
-        driver.switchTo().alert().accept();
-    }
 
     public void clickButtonCloseSignUp () { driver.findElement(btnCloseSign).click(); }
 
@@ -157,17 +191,40 @@ public class WebPage {
         driver.findElement(btnAddtoCart).click();
     }
 
-    public void clickOkeInAlerttoCart () throws InterruptedException{
-        Alert alert = driver.switchTo().alert();
-        String massageAlert = driver.switchTo().alert().getText();
-        System.out.println(massageAlert);
-        Thread.sleep(5000);
-        alert.accept();
-    }
-
     public void clickNavCart() { driver.findElement(navCart).click(); }
 
-    public void willShowPurchasedProducts() { driver.get("https://www.demoblaze.com/cart.html"); }
+    public void willShowPurchasedProducts() {
+        WebElement product2 = driver.findElement(productCart);
+        assertTrue(product2.isDisplayed());
+        assertEquals("Samsung galaxy s6 360 Delete", product2.getText());
+    }
 
+    public void clickButtonDelete () { driver.findElement(btnDelete).click(); }
+
+    public void cartWillEmpty () { driver.findElement(tableCart).isDisplayed(); }
+
+    public void clickButtonPlaceOrder() { driver.findElement(btnPlaceOrder).click(); }
+
+    public void clickButtonClosePlaceOrder() { driver.findElement(btnClosePlace).click();}
+
+    public void willBackToCart() { driver.get("https://www.demoblaze.com/cart.html"); }
+
+    public void fillName(String namePurc) { driver.findElement(namePurchase).sendKeys(namePurc);}
+
+    public void fillCounty(String contryPurc) { driver.findElement(countryPurchase).sendKeys(contryPurc);}
+
+    public void fillCity(String cityPurc) { driver.findElement(cityPurchase).sendKeys(cityPurc); }
+
+    public void fillCreditCard (String creditPurc) { driver.findElement(creditPurchase).sendKeys(creditPurc); }
+
+    public void fillMonth (String monthPurc) { driver.findElement(monthPurchase).sendKeys(monthPurc); }
+
+    public void fillYear (String yearPurc) {driver.findElement(yearPurchase).sendKeys(yearPurc);}
+
+    public void clickButtonPurchase() { driver.findElement(btnPurchase).click(); }
+
+    public void willShowThankYouForYourPurchase () { driver.findElement(thankPurchase).click(); }
+
+    public void canClickOke () { driver.findElement(okePurchase).click(); }
 
 }

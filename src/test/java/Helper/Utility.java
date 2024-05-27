@@ -3,12 +3,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.io.File;
 import java.time.Duration;
 
 public class Utility {
 
     public static WebDriver driver;
 
+    public static File getJSONSchema(String JSONFile){
+        return new File("src/test/java/Helper/JSONSchemaData/", JSONFile);
+    }
     public static void openDriver() {
         ChromeOptions options = new ChromeOptions();
         //options.addArguments("--headless");

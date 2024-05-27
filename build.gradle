@@ -30,6 +30,7 @@ test {
     useJUnitPlatform()
     systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
 }
+
 configurations {
     cucumberRuntime {
         extendsFrom testImplementation
